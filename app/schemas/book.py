@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from app.enums import GenreEnum
 from app.schemas.author import AuthorOut
+from typing import Optional
+
 
 class BookBase(BaseModel):
     title: str
@@ -16,3 +18,11 @@ class BookOut(BookBase):
 
     class Config:
         orm_mode = True
+
+
+class BookUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    author_id: Optional[int] = None
+
+    model_config = {"from_attributes": True}

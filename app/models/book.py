@@ -11,4 +11,9 @@ class Book(Base):
     genre = Column(Enum(GenreEnum), nullable=False)
     author_id = Column(Integer, ForeignKey("authors.id"))
 
+  
     author = relationship("Author", back_populates="books")
+
+    
+    pages = relationship("BookContent", back_populates="book", cascade="all, delete")
+    comments = relationship("Comment", back_populates="book", cascade="all, delete")

@@ -6,3 +6,8 @@ class GenreEnum(str, Enum):
     fantasy = "fantasy"
     biography = "biography"
     science = "science"
+
+
+class RoleEnum(str, Enum):
+    admin = "admin"
+    user = "user"

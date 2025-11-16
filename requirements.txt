@@ -4,3 +4,12 @@ sqlalchemy
 pydantic
 pydantic[email]
 python-multipart
+psycopg2-binary          
+passlib[bcrypt]
+python-jose
+email-validator
+alembic
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+cryptography
